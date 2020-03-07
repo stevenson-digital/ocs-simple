@@ -1,9 +1,7 @@
 import React from 'react'
 import HeadingWithText from './HeadingWithText'
 
-const Contact = (props) => {
-  const { heading, text } = props
-
+const Contact = () => {
   return (
     <div className="Contact">
       <HeadingWithText heading={'Contact'} text={'ollie@stevenson.digital'}/>
