@@ -15,6 +15,12 @@
   list-style: none;
   margin: 0;
   padding: 0;
+
+  @for $i from 0 through 5 {
+    .Navbar__li:nth-child(#{$i}) {
+      animation-delay: $i * 50ms;
+    }
+  }
 }
 
 .Navbar__li {

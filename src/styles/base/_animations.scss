@@ -2,6 +2,7 @@
   Animations
 ======================================== */
 .a-fade-in-up {
+  opacity: 0;
   animation: fadeInUp $t-fade-anim;
 }
 
