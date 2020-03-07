@@ -30,14 +30,13 @@
   &:before {
     content: '';
     position: absolute;
-    bottom: -10px;
+    width: 100%;
+    height: 1px;
+    bottom: -2px;
     left: 0;
     right: 0;
     margin: auto;
-    width: 5px;
-    height: 5px;
     background-color: $c-black;
-    border-radius: 50%;
     opacity: 0;
     transition: background-color $t-standard, opacity $t-standard;
   }
@@ -52,7 +51,6 @@
     color: $c-grey;
 
     &:before {
-      opacity: 1;
       background-color: $c-grey;
     }
   }

@@ -19,3 +19,7 @@
 .HeadingWithText__h1 {
   @include scale-property(margin-bottom, 35px, 25px, 10px);
 }
+
+.HeadingWithText__p {
+  animation-delay: 50ms;
+}

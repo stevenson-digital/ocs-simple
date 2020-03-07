@@ -6,22 +6,22 @@ const Navbar = () => {
     <nav className="Navbar">
       <ul className="Navbar__ul">
         <li className="Navbar__li">
-          <NavLink className="Navbar__link f-vogue-32-22" activeClassName="is-active" exact={true} to="/">
+          <NavLink className="Navbar__link f-vogue-26-18" activeClassName="is-active" exact={true} to="/">
             Home
           </NavLink>
         </li>
         <li className="Navbar__li">
-          <NavLink className="Navbar__link f-vogue-32-22" activeClassName="is-active" to="/experience">
+          <NavLink className="Navbar__link f-vogue-26-18" activeClassName="is-active" to="/experience">
             Experience
           </NavLink>
         </li>
         <li className="Navbar__li">
-          <NavLink className="Navbar__link f-vogue-32-22" activeClassName="is-active" to="/skills">
+          <NavLink className="Navbar__link f-vogue-26-18" activeClassName="is-active" to="/skills">
             Skills
           </NavLink>
         </li>
         <li className="Navbar__li">
-          <NavLink className="Navbar__link f-vogue-32-22" activeClassName="is-active" to="/contact">
+          <NavLink className="Navbar__link f-vogue-26-18" activeClassName="is-active" to="/contact">
             Contact
           </NavLink>
         </li>

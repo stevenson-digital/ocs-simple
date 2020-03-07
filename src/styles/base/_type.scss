@@ -23,8 +23,8 @@ body {
   -moz-osx-font-smoothing: grayscale;
   color: $c-black;
   font-weight: normal;
-  line-height: 1.27;
-  @include scale-property(font-size, 22px, 20px, 18px);
+  line-height: 1.5;
+  @include scale-property(font-size, 20px, 18px, 16px);
 }
 
 h1,
@@ -46,8 +46,8 @@ a:focus {
   @include scale-property(font-size, 72px, 56px, 42px);
 }
 
-.f-vogue-32-22 {
+.f-vogue-26-18 {
   font-family: $f-heading;
   line-height: 1;
-  @include scale-property(font-size, 32px, 27px, 22px);
+  @include scale-property(font-size, 26px, 20px, 18px);
 }

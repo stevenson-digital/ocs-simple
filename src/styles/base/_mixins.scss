@@ -4,7 +4,7 @@
 @mixin scale-property($property, $large, $medium, $small) {
   #{$property}: #{$large};
 
-  @media (max-width: #{$b-xmedium}) {
+  @media (max-width: #{$b-large}) {
     #{$property}: #{$medium};
   }
 
