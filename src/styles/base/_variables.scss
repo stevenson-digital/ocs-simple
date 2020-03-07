@@ -10,9 +10,9 @@ $b-xlarge: 1800px;
 /*  ==================================
   Colors
 =================================== */
-$c-black: #000000;
+$c-black: #282828;
 $c-white: #FFFFFF;
-$c-grey: #242424;
+$c-grey: #656565;
 
 /*  ==================================
   Fonts
@@ -23,6 +23,6 @@ $f-body: 'brownregular', sans-serif;
 /*  ==================================
   Transitions
 =================================== */
-$t-default-ms: 200ms;
+$t-default-ms: 250ms;
 $t-standard: $t-default-ms linear;
 $t-cubic-bez: cubic-bezier(0.77, 0, 0.175, 1);

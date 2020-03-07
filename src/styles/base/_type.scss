@@ -1,16 +1,6 @@
 /* ===========================
   Fonts & Type
 =========================== */
-body {
-  font-family: $f-body, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  color: $c-black;
-  font-weight: normal;
-  line-height: 1.27;
-  @include font-size(22px, 20px, 18px);
-}
-
 @font-face {
   font-family: 'vogueregular';
   src: url('../../fonts/vogue-webfont.woff2') format('woff2'),
@@ -27,14 +17,37 @@ body {
   font-style: normal;
 }
 
+body {
+  font-family: $f-body, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: $c-black;
+  font-weight: normal;
+  line-height: 1.27;
+  @include scale-property(font-size, 22px, 20px, 18px);
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  font-weight: normal;
+  margin: 0;
+}
+
+a:focus {
+  outline: none;
+}
+
 .f-vogue-72-42 {
   font-family: $f-heading;
   line-height: 1;
-  font-size: 72px;
+  @include scale-property(font-size, 72px, 56px, 42px);
 }
 
 .f-vogue-32-22 {
   font-family: $f-heading;
   line-height: 1;
-  font-size: 32px;
+  @include scale-property(font-size, 32px, 27px, 22px);
 }

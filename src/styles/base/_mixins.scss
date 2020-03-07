@@ -1,14 +1,14 @@
 /* ========================================
   Mixins
 ======================================== */
-@mixin font-size($large, $medium, $small) {
-  font-size: #{$large};
+@mixin scale-property($property, $large, $medium, $small) {
+  #{$property}: #{$large};
 
   @media (max-width: #{$b-xmedium}) {
-    font-size: #{$medium};
+    #{$property}: #{$medium};
   }
 
   @media (max-width: #{$b-small}) {
-    font-size: #{$small};
+    #{$property}: #{$small};
   }
 }
