@@ -1,0 +1,28 @@
+/*  ==================================
+  Breakpoints
+=================================== */
+$b-small: 640px;
+$b-medium: 980px;
+$b-xmedium: 1200px;
+$b-large: 1400px;
+$b-xlarge: 1800px;
+
+/*  ==================================
+  Colors
+=================================== */
+$c-black: #000000;
+$c-white: #FFFFFF;
+$c-grey: #242424;
+
+/*  ==================================
+  Fonts
+=================================== */
+$f-heading: 'vogueregular', serif;
+$f-body: 'brownregular', sans-serif;
+
+/*  ==================================
+  Transitions
+=================================== */
+$t-default-ms: 200ms;
+$t-standard: $t-default-ms linear;
+$t-cubic-bez: cubic-bezier(0.77, 0, 0.175, 1);

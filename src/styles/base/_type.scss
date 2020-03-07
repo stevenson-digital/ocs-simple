@@ -1,0 +1,40 @@
+/* ===========================
+  Fonts & Type
+=========================== */
+body {
+  font-family: $f-body, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: $c-black;
+  font-weight: normal;
+  line-height: 1.27;
+  @include font-size(22px, 20px, 18px);
+}
+
+@font-face {
+  font-family: 'vogueregular';
+  src: url('../../fonts/vogue-webfont.woff2') format('woff2'),
+       url('../../fonts/vogue-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'brownregular';
+  src: url('../../fonts/brown-regular-webfont.woff2') format('woff2'),
+       url('../../fonts/brown-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.f-vogue-72-42 {
+  font-family: $f-heading;
+  line-height: 1;
+  font-size: 72px;
+}
+
+.f-vogue-32-22 {
+  font-family: $f-heading;
+  line-height: 1;
+  font-size: 32px;
+}

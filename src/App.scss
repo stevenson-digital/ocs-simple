@@ -1,15 +1,9 @@
-body {
-  color: '#353535';
-}
+// Base
+@import "styles/base/reset";
+@import "styles/base/variables";
+@import "styles/base/animations";
+@import "styles/base/mixins";
+@import "styles/base/type";
 
-h1,
-h2,
-h3,
-h4 {
-  font-family: 'vogueregular', serif;
-  font-weight: normal;
-}
-
-h1 {
-  font-size: 72px;
-}
+// Components
+@import "styles/components/Navbar";
