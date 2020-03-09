@@ -8,36 +8,60 @@ export default class Navbar extends React.Component {
 
   handleToggleMobileNav = (e) => {
     e.preventDefault()
-    console.log('clicked')
     this.setState({mobileIsOpen: !this.state.mobileIsOpen})
+  }
+
+  handleCloseMobileNav = () => {
+    this.setState({mobileIsOpen: false})
   }
 
   render() {
     return (
-      <nav className={`Navbar ${this.state.mobileIsOpen ? "Navbar--mobile-is-open" : ""}`} onClick={this.handleToggleMobileNav}>
-        <button className="Navbar__burger u-btn-clear a-fade-in">
+      <nav className={`Navbar ${this.state.mobileIsOpen ? "Navbar--mobile-is-open" : ""}`}>
+        <button className="Navbar__burger u-btn-clear a-fade-in" onClick={this.handleToggleMobileNav}>
           <div className="Navbar__burger-bar"></div>
           <div className="Navbar__burger-bar"></div>
           <div className="Navbar__burger-bar"></div>
         </button>
         <ul className="Navbar__ul">
           <li className="Navbar__li a-fade-in-up">
-            <NavLink className="Navbar__link f-vogue-26-18" activeClassName="is-active" exact={true} to="/">
+            <NavLink
+              className="Navbar__link f-vogue-26-18"
+              activeClassName="is-active"
+              exact={true}
+              to="/"
+              onClick={this.handleCloseMobileNav}
+            >
               Home
             </NavLink>
           </li>
           <li className="Navbar__li a-fade-in-up">
-            <NavLink className="Navbar__link f-vogue-26-18" activeClassName="is-active" to="/experience">
+            <NavLink
+              className="Navbar__link f-vogue-26-18"
+              activeClassName="is-active"
+              to="/experience"
+              onClick={this.handleCloseMobileNav}
+            >
               Experience
             </NavLink>
           </li>
           <li className="Navbar__li a-fade-in-up">
-            <NavLink className="Navbar__link f-vogue-26-18" activeClassName="is-active" to="/skills">
+            <NavLink
+              className="Navbar__link f-vogue-26-18"
+              activeClassName="is-active"
+              to="/skills"
+              onClick={this.handleCloseMobileNav}
+            >
               Skills
             </NavLink>
           </li>
           <li className="Navbar__li a-fade-in-up">
-            <NavLink className="Navbar__link f-vogue-26-18" activeClassName="is-active" to="/contact">
+            <NavLink
+              className="Navbar__link f-vogue-26-18"
+              activeClassName="is-active"
+              to="/contact"
+              onClick={this.handleCloseMobileNav}
+            >
               Contact
             </NavLink>
           </li>
