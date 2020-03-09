@@ -3,7 +3,7 @@ import HeadingWithText from './HeadingWithText'
 
 export default class Home extends React.Component {
   state = {
-    heading: 'Ollie Stevenson',
+    heading: '',
     text: ''
   }
 
