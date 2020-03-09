@@ -21,7 +21,7 @@ export default class Contact extends React.Component {
     Storyblok.get('cdn/stories/contact', {})
     .then(response => {
       const content = response.data.story.content.body[0]
-      const text = Storyblok.richTextResolver.render(content.text.content[0])
+      const text = Storyblok.richTextResolver.render(content.text)
 
       this.setState({
         heading: content.heading,
