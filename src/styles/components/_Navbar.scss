@@ -3,8 +3,13 @@
 =========================== */
 .Navbar {
   position: fixed;
+  width: 100%;
+  display: flex;
+  left: 0;
+  justify-content: space-between;
   @include scale-property(top, 60px, 35px, 20px);
-  @include scale-property(left, 40px, 30px, 20px);
+  @include scale-property(padding-left, 40px, 30px, 20px);
+  @include scale-property(padding-right, 40px, 30px, 20px);
 }
 
 /* ===========================
@@ -60,4 +65,25 @@
       background-color: $c-grey;
     }
   }
+}
+
+.Navbar__social {
+  animation-delay: 250ms;
+
+  .Navbar__social-link:first-of-type {
+    margin-right: 6px;
+  }
+}
+
+.Navbar__social-link {
+  color: $c-black;
+  transition: $t-standard;
+
+  &:hover {
+    color: $c-grey;
+  }
+}
+
+.Navbar__social-icon {
+  height: 16px;
 }

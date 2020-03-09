@@ -1,6 +1,20 @@
 /* ========================================
   Animations
 ======================================== */
+.a-fade-in {
+  opacity: 0;
+  animation: fadeIn $t-fade-anim;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .a-fade-in-up {
   opacity: 0;
   animation: fadeInUp $t-fade-anim;
