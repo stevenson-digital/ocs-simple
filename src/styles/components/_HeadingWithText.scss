@@ -7,6 +7,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  @include scale-property(padding-top, 30px, 30px, 40px);
+  @include scale-property(padding-right, 0, 30px, 20px);
+  @include scale-property(padding-left, 0, 30px, 20px);
 }
 
 /* ===========================
@@ -22,4 +25,14 @@
 
 .HeadingWithText__p {
   animation-delay: 50ms;
+
+  a {
+    color: $c-black;
+    text-decoration: none;
+    transition: color $t-standard;
+
+    &:hover {
+      color: $c-grey;
+    }
+  }
 }
