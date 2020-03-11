@@ -1,5 +1,5 @@
 import React from 'react'
-import HeadingWithText from './HeadingWithText'
+import HeadingWithText from '../HeadingWithText'
 
 export default class Contact extends React.Component {
   state = {

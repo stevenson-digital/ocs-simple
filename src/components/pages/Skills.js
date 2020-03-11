@@ -1,7 +1,7 @@
 import React from 'react'
-import HeadingWithText from './HeadingWithText'
+import HeadingWithText from '../HeadingWithText'
 
-export default class Home extends React.Component {
+export default class Skills extends React.Component {
   state = {
     heading: '',
     text: ''
@@ -18,7 +18,7 @@ export default class Home extends React.Component {
       }
     })
 
-    Storyblok.get('cdn/stories/home', {})
+    Storyblok.get('cdn/stories/skills', {})
     .then(response => {
       const content = response.data.story.content.body[0]
       this.setState({
@@ -32,7 +32,7 @@ export default class Home extends React.Component {
 
   render() {
     return (
-      <div className="Home">
+      <div className="Skills">
         <HeadingWithText heading={this.state.heading} text={this.state.text}/>
       </div>
     )
