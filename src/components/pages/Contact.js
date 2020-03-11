@@ -1,33 +1,29 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import HeadingWithText from '../HeadingWithText'
 import { Storyblok } from '../../constants'
 
-export default class Contact extends React.Component {
-  state = {
-    heading: '',
-    text: ''
-  }
+export function Contact() {
+  const [heading, setHeading] = useState(null)
+  const [text, setText] = useState(null)
 
-  componentDidMount() {
+  useEffect(() => {
     Storyblok.get('cdn/stories/contact', {})
     .then(response => {
       const content = response.data.story.content.body[0]
-      const text = Storyblok.richTextResolver.render(content.text)
+      setHeading(content.heading)
+      setText(Storyblok.richTextResolver.render(content.text))
 
-      this.setState({
-        heading: content.heading,
-        text: text
-      })
     }).catch(error => { 
       console.log(error)
     })
-  }
+  }, [])
 
-  render() {
-    return (
-      <div className="Contact">
-        <HeadingWithText heading={this.state.heading} text={this.state.text}/>
-      </div>
-    )
-  }
+  return (
+    <div className="Contact">
+      <HeadingWithText
+        heading={heading}
+        text={text}
+      />
+    </div>
+  )
 }

@@ -1,31 +1,29 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import HeadingWithText from '../HeadingWithText'
 import { Storyblok } from '../../constants'
 
-export default class Home extends React.Component {
-  state = {
-    heading: '',
-    text: ''
-  }
+export function Home() {
+  const [heading, setHeading] = useState(null)
+  const [text, setText] = useState(null)
 
-  componentDidMount() {
+  useEffect(() => {
     Storyblok.get('cdn/stories/home', {})
     .then(response => {
       const content = response.data.story.content.body[0]
-      this.setState({
-        heading: content.heading,
-        text: content.text.content[0].content[0].text
-      })
+      setHeading(content.heading)
+      setText(Storyblok.richTextResolver.render(content.text))
+
     }).catch(error => { 
       console.log(error)
     })
-  }
+  }, [])
 
-  render() {
-    return (
-      <div className="Home">
-        <HeadingWithText heading={this.state.heading} text={this.state.text}/>
-      </div>
-    )
-  }
+  return (
+    <div className="Home">
+      <HeadingWithText
+        heading={heading}
+        text={text}
+      />
+    </div>
+  )
 }
