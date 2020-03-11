@@ -1,5 +1,6 @@
 import React from 'react'
 import HeadingWithText from '../HeadingWithText'
+import { Storyblok } from '../../constants'
 
 export default class Experience extends React.Component {
   state = {
@@ -8,16 +9,6 @@ export default class Experience extends React.Component {
   }
 
   componentDidMount() {
-    const StoryblokClient = require('storyblok-js-client')
-    
-    const Storyblok = new StoryblokClient({
-      accessToken: '1zr64RGrbHn0GX8spfMvfAtt',
-      cache: {
-        clear: 'auto',
-        type: 'memory'
-      }
-    })
-
     Storyblok.get('cdn/stories/experience', {})
     .then(response => {
       const content = response.data.story.content.body[0]
