@@ -6,8 +6,6 @@
   height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: center;
-  @include scale-property(padding-top, 30px, 30px, 40px);
   @include scale-property(padding-right, 0, 30px, 20px);
   @include scale-property(padding-left, 0, 30px, 20px);
 }
@@ -17,6 +15,7 @@
 =========================== */
 .HeadingWithText__inner {
   width: 660px;
+  @include scale-property(margin-top, 37vh, 34vh, 25vh);
 }
 
 .HeadingWithText__h1 {
