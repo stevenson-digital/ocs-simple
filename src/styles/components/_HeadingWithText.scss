@@ -3,9 +3,9 @@
 =========================== */
 .HeadingWithText {
   width: 100%;
-  height: 100vh;
   display: flex;
   justify-content: center;
+  margin-bottom: 60px;
   @include scale-property(padding-right, 0, 30px, 20px);
   @include scale-property(padding-left, 0, 30px, 20px);
 }
@@ -26,16 +26,28 @@
   animation-delay: 50ms;
 
   a {
+    position: relative;
     color: $c-black;
     text-decoration: none;
     transition: color $t-standard;
+    @include link-underline();
 
     &:hover {
       color: $c-grey;
+
+      &:before {
+        opacity: 0;
+      }
     }
   }
 
   ul {
     padding-left: 20px;
+  }
+
+  li {
+    @media (max-width: $b-small) {
+      margin-bottom: 10px;
+    }
   }
 }
