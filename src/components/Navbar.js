@@ -59,6 +59,16 @@ export default class Navbar extends React.Component {
             <NavLink
               className="Navbar__link f-vogue-26-18"
               activeClassName="is-active"
+              to="/projects"
+              onClick={this.handleCloseMobileNav}
+            >
+              Projects
+            </NavLink>
+          </li>
+          <li className="Navbar__li a-fade-in-up">
+            <NavLink
+              className="Navbar__link f-vogue-26-18"
+              activeClassName="is-active"
               to="/contact"
               onClick={this.handleCloseMobileNav}
             >
