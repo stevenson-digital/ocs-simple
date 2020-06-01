@@ -30,19 +30,22 @@
     color: $c-black;
     text-decoration: none;
     transition: color $t-standard;
-    @include link-underline();
 
     &:hover {
       color: $c-grey;
-
-      &:before {
-        opacity: 0;
-      }
     }
   }
 
   ul {
     padding-left: 20px;
+
+    a {
+      @include link-underline();
+
+      &:hover:before {
+        opacity: 0;
+      }
+    }
   }
 
   li {
